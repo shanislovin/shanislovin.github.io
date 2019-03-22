@@ -29,20 +29,37 @@
 	</header>
 
 	<body>
-		<br>
-		<div class="anchors">
-			<!--<a href="#moreinfo">more info</a>-->
-		</div>
-		<div class="backgroundText" id="table">
-			<p class="quote">"In ancient times cats were worshipped as gods, they have not forgotten this."</p>
-			<p class="author">Terry Pratchett</p>
+		<div class="backgroundImage">
+			<div class="backgroundText">
+				<p class="quote">"In ancient times cats were worshipped as gods, they have not forgotten this."</p>
+				<p class="author">Terry Pratchett</p>
+			</div>
 		</div>
 
 		<div class="bodyText">
-			<p>
+			<p>Why cats are good:</p>
+			<ul>
+				<li>Cats are fluffy</li>
+			</ul>
 		</div>
 	</body>
 
 <footer> </footer>
+
+<script>
+var velocity = 0.5;
+
+function update(){ 
+var pos = $(window).scrollTop(); 
+$('.container').each(function() { 
+    var $element = $(this);
+    // subtract some from the height b/c of the padding
+    var height = $element.height()-18;
+    $(this).css('backgroundImage', '50% ' + Math.round((height - pos) * velocity) +  'px'); 
+   }); 
+   };
+
+ $(window).bind('scroll', update);
+</script>
 
 </html>

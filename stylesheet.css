@@ -2,6 +2,7 @@ header {
 	background-color: #ffffff;
 	height: 100px;
 	font-family: sans-serif;
+	margin-top: -20px;
 }
 
 header h1 {
@@ -11,10 +12,13 @@ header h1 {
 	margin-right: 100px;
 }
 
-nav ul {
-	list-style: none;
-	background-color: #f5efff;
-	position: relative;
+nav {
+	padding-right: 20px;
+}
+
+nav li {
+  float: right;
+  list-style: none;
 }
 
 nav li a {
@@ -28,12 +32,14 @@ nav li a {
 	font-family: sans-serif;
 }
 
-body {
+.backgroundImage {
     margin: 0;
     background:  url("https://images.unsplash.com/photo-1513780043732-614405263485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") no-repeat;
     background-size: cover;
   	filter: alpha(opacity=60); 
-  	background-position: 0 -15vw;
+  	background-position: 0 -20vw;
+	overflow:auto;
+	height: 900px;
  }
 
  .backgroundText{
@@ -44,7 +50,11 @@ body {
  	padding-right: 200px;
  	padding-bottom: 30px;
  	opacity: 0.6;
- 	font-size: 2em;
+ 	font-size: 1.7em;
+ }
+ 
+ .bodyText {
+	 padding: 100px;
  }
 
  .quote {
