@@ -33,7 +33,6 @@ nav li a {
 }
 
 .backgroundImage {
-    margin: 0;
     background:  url("https://images.unsplash.com/photo-1513780043732-614405263485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") no-repeat;
     background-size: cover;
   	filter: alpha(opacity=60); 
@@ -43,7 +42,7 @@ nav li a {
  }
 
  .backgroundText{
- 	margin-top:550px;
+ 	margin-top: 600px;
  	background-color: #ffffff;
  	padding-top: 30px;
  	padding-left: 200px;
@@ -65,6 +64,9 @@ nav li a {
  	font-size: 1em;
  	float: right;
  	margin-top: -40px;
+ }
+
+ .bodyText {
  }
 
  footer {
