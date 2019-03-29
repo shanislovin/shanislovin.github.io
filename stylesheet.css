@@ -12,6 +12,12 @@ header h1 {
 	margin-right: 100px;
 }
 
+body {
+	font-family: Verdana, 
+	sans-serif;
+}
+
+
 nav {
 	padding-right: 20px;
 }
@@ -42,7 +48,7 @@ nav li a {
  }
 
  .backgroundText{
- 	margin-top: 600px;
+ 	margin-top: 550px;
  	background-color: #ffffff;
  	padding-top: 30px;
  	padding-left: 200px;
@@ -72,3 +78,88 @@ nav li a {
  footer {
  	margin-top: 300px;
  }
+
+/* The following CSS is for the carousel of videos.*/
+ iframe {
+ 	padding-top: 3vw;
+ }
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  height: 48vw;
+  position: relative;
+  margin: 0 auto;
+  background-color: #3a3a3a;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+	padding: 20px;
+	font-style: bold;
+	color: #f2f2f2;
+	font-size: 2em;
+	height: 60px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  margin-top: 30px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}

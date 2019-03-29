@@ -62,43 +62,78 @@
 
 			<p>Thanks</p>
 		</div>
-		<div id="videos"><h1>Cat Videos</h1>
-			<p>This video explores all the different species of cats, their celebrations across the world, how they became one of the most popular domestic pet species, and much more.</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/eAR3erZ3DrA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-			<p>Watch an amazing wild cat attempt to catch her prey!</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/nl8o9PsJPAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<!-- carousel style resource: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow -->
+		<div class="slideshow-container" id="videos">
 
-			<p>Why do cats hunt? BBC covers the instincts of cats, their reasons for hunting and how their minds work.</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/ltYxFlMlYqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div id="videos"><h1>Cat Videos</h1>
 
+			<div class="mySlides fade">
+				<center><iframe style="width:80%" height="600" src="https://www.youtube.com/embed/nl8o9PsJPAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="text">Watch the amazing wild cat named Gyra attempt to catch her prey!</div></center>
+			</div>
 
+			<div class="mySlides fade">
+			  	<center><iframe style="width:80%" height="600" src="https://www.youtube.com/embed/eAR3erZ3DrA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  	<div class="text">This video explores all the different species of cats, their celebrations across the world, how they became one of the most popular domestic pet species, and much more.</div></center>
+			</div>
+
+			<div class="mySlides fade">
+				<center><iframe style="width:80%" height="600" src="https://www.youtube.com/embed/ltYxFlMlYqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  	<div class="text">Why do cats hunt? BBC covers the instincts of cats, their reasons for hunting and how their minds work.</div></center>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span> 
+			  <span class="dot" onclick="currentSlide(2)"></span> 
+			  <span class="dot" onclick="currentSlide(3)"></span> 
+			</div>
 		</div>
 
+		<br>
 		<div id="links"><h1>Where Can I Find More Info?</h1>
 			<p>These are sites which may contain more relevant info to you:</p>
 			<ul>
 				<li>Support the Wildcat Sactuary at their <a href="https://www.wildcatsanctuary.org/education/species/" target="_blank">website</a>, or view the vast amazing wild cat species you never knew of!</li>
 				<li>Head to <a href="https://www.catgifpage.com/" target="_blank">catgifpage</a> to find unlimited amounts of cat gifs!</li>
 				<li> Interested in <a href="https://moderncat.com/articles/cats-mythology/" target="_blank">cats in mythology</a>, or other interesting cat related articles? <a href="https://moderncat.com/" target="_blank"> moderncat.com</a>.</li>
+			</ul>
+		</div>
+
+		<!-- same resource as mentioned above -->
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+		</script>
 	</body>
 
 <footer> </footer>
-
-<script>
-var velocity = 0.5;
-
-function update(){ 
-var pos = $(window).scrollTop(); 
-$('.container').each(function() { 
-    var $element = $(this);
-    // subtract some from the height b/c of the padding
-    var height = $element.height()-18;
-    $(this).css('backgroundImage', '50% ' + Math.round((height - pos) * velocity) +  'px'); 
-   }); 
-   };
-
- $(window).bind('scroll', update);
-</script>
 
 </html>
