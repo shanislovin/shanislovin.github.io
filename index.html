@@ -30,6 +30,11 @@
 
 	<body>
 		<div class="backgroundImage">
+			<div class="anchors">
+				<a href="#videos">Videos</a>
+				<a href="#images">Images</a>
+				<a href="#links">Links</a>
+			</div>
 			<div class="backgroundText">
 				<p class="quote">"In ancient times cats were worshipped as gods, they have not forgotten this."</p>
 				<p class="author">Terry Pratchett</p>
@@ -66,7 +71,7 @@
 		<!-- carousel style resource: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow -->
 		<div class="slideshow-container" id="videos">
 
-			<div id="videos"><h1>Cat Videos</h1>
+			<h1>Cat Videos</h1>
 
 			<div class="mySlides fade">
 				<center><iframe style="width:80%" height="600" src="https://www.youtube.com/embed/nl8o9PsJPAQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -83,6 +88,11 @@
 			  	<div class="text">Why do cats hunt? BBC covers the instincts of cats, their reasons for hunting and how their minds work.</div></center>
 			</div>
 
+			<div class="mySlides fade">
+				<center><iframe style="width:80%" height="600" src="https://www.youtube.com/embed/videoseries?list=PLBhKKjnUR0XB4ZKm3iAi-HzHvjMLlQI5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  	<div class="text">Got a cat of your own? Entertain them by putting this youtube playlist on the television for them.</div></center>
+			</div>
+
 			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -90,11 +100,53 @@
 			  <span class="dot" onclick="currentSlide(1)"></span> 
 			  <span class="dot" onclick="currentSlide(2)"></span> 
 			  <span class="dot" onclick="currentSlide(3)"></span> 
+			  <span class="dot" onclick="currentSlide(4)"></span> 
+			</div>
+		</div>
+
+		<div class="slideshow-container" id="images">
+			<h1>Cat Images</h1>
+			<div class="mySlidesImg fade">
+				<center><img src="https://s2r.iucnredlist.org/sis2_images/487336308.jpg">
+				<div class="text">The beautiful black footed cat!</div></center>
+			</div>
+
+			<div class="mySlidesImg fade">
+				<center><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Curious cat capture containing completely contrasting characters <a href="https://t.co/R4bE25chMp">pic.twitter.com/R4bE25chMp</a></p>&mdash; HUMOROUS ANIMALS (@CUTEFUNNYANIMAL) <a href="https://twitter.com/CUTEFUNNYANIMAL/status/967368800256618496?ref_src=twsrc%5Etfw">February 24, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<div class="text">Norweigan Forest Cats in the snow</div></center>
+			</div>
+
+			<div class="mySlidesImg fade">
+				<center><img src="http://queticosuperior.org/wp-content/uploads/2016/12/canada-lynx-1024x650.jpg">
+				<div class="text">The silent Canada Lynx crossing the U.S state.</div></center>
+			</div>
+
+			<div class="mySlidesImg fade">
+				<center><img src="https://cdn.zmescience.com/wp-content/uploads/2013/10/sand-cat.jpg">
+				<div class="text">A family of sand cats, who's species are mostly found in North Africa, the Middle East and Central Asia.</div></center>
+			</div>
+
+			<div class="mySlidesImg fade">
+				<center><img src="https://static.boredpanda.com/blog/wp-content/uploads/2015/11/pallas-cat-manul-2.jpg">
+				<div class="text">The comical Pallas Cat.</div></center>
+			</div>
+
+			<a class="prev" onclick="plusSlidesImg(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlidesImg(1)">&#10095;</a>
+
+			<div style="text-align:center">
+			  <span class="dotImg" onclick="currentSlideImg(1)"></span> 
+			  <span class="dotImg" onclick="currentSlideImg(2)"></span> 
+			  <span class="dotImg" onclick="currentSlideImg(3)"></span> 
+			  <span class="dotImg" onclick="currentSlideImg(4)"></span> 
+			  <span class="dotImg" onclick="currentSlideImg(5)"></span> 
 			</div>
 		</div>
 
 		<br>
-		<div id="links"><h1>Where Can I Find More Info?</h1>
+		<div id="links">
+			<h1>Where Can I Find More Info?</h1>
 			<p>These are sites which may contain more relevant info to you:</p>
 			<ul>
 				<li>Support the Wildcat Sactuary at their <a href="https://www.wildcatsanctuary.org/education/species/" target="_blank">website</a>, or view the vast amazing wild cat species you never knew of!</li>
@@ -106,7 +158,9 @@
 		<!-- same resource as mentioned above -->
 		<script>
 			var slideIndex = 1;
+			var slideIndexImg = 1;
 			showSlides(slideIndex);
+			showSlidesImg(slideIndexImg);
 
 			function plusSlides(n) {
 			  showSlides(slideIndex += n);
@@ -115,6 +169,15 @@
 			function currentSlide(n) {
 			  showSlides(slideIndex = n);
 			}
+
+			function plusSlidesImg(n) {
+			  showSlidesImg(slideIndexImg += n);
+			}
+
+			function currentSlideImg(n) {
+			  showSlidesImg(slideIndexImg = n);
+			}
+
 
 			function showSlides(n) {
 			  var i;
@@ -130,6 +193,22 @@
 			  }
 			  slides[slideIndex-1].style.display = "block";  
 			  dots[slideIndex-1].className += " active";
+			}
+
+			function showSlidesImg(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlidesImg");
+			  var dots = document.getElementsByClassName("dotImg");
+			  if (n > slides.length) {slideIndexImg = 1}    
+			  if (n < 1) {slideIndexImg = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndexImg-1].style.display = "block";  
+			  dots[slideIndexImg-1].className += " active";
 			}
 		</script>
 	</body>
