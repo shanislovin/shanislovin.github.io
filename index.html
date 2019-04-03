@@ -17,25 +17,24 @@
 	</head>
 
 	<header>
-		<!--<img style="width:50px;float:left" src = "https://i.imgur.com/KOXOBiN.gif">-->
-    	<h1>Cats</h1>
-    	<nav>
+		<nav>
+    		<p>Cats</p>
     		<ul>
-    			<li><a href="index.html">HOME</a></li>
+    			<li><a href="mypage2.html">ABOUT</a></li>
 				<li><a href="mypage1.html">MORE</a></li>
-				<li><a href="mypage2.html">ABOUT</a></li>
+				<li><a href="index.html">HOME</a></li>
 			</ul>
 		</nav>
 	</header>
 
 	<body>
 		<div class="backgroundImage">
-			<div class="anchors">
-				<a href="#videos">Videos</a>
-				<a href="#images">Images</a>
-				<a href="#links">Links</a>
-			</div>
-			<div class="backgroundText">
+			<ul>
+				<li><a href="#videos">CAT VIDEOS</a></li>
+				<li><a href="#images">CAT IMAGES</a></li>
+				<li><a href="#links">CAT LINKS</a></li>
+			</ul>
+			<div class="imageText">
 				<p class="quote">"In ancient times cats were worshipped as gods, they have not forgotten this."</p>
 				<p class="author">Terry Pratchett</p>
 			</div>
@@ -102,13 +101,37 @@
 			  <span class="dot" onclick="currentSlide(3)"></span> 
 			  <span class="dot" onclick="currentSlide(4)"></span> 
 			</div>
+
 		</div>
+
+		<table border=2 width=50%> the Table
+			<tr>
+				<th></th>
+				<th>Genes</th>
+				<th>Vocals</th>
+				<th>A3</th>
+			</tr>
+			<tr>
+				<th>Domestic Cat</th>
+				<th>Has more mutation on genes to do with behaviours such as affection, memory and ability to be tamed through stimuli.</th>
+				<th>Ability to purr</th>
+				<th>B3</th>
+			</tr>
+			<tr>
+				<th>Wild Cat</th>
+				<!--https://crownridgetigers.com/big-cat-behavior-decoded-->
+				<th>Tend to be more aggressive to be able to survive the wild. Necessity to dominate is more prevalent as big cats often hunt and eat in groups.</th>
+				<!--https://www.wildcatsanctuary.org/do-big-cats-roar-or-purr/-->
+				<th>Mostly roar and unable to purr</th>
+				<th>C3</th>
+			</tr>
+		</table>
 
 		<div class="slideshow-container" id="images">
 			<h1>Cat Images</h1>
 			<div class="mySlidesImg fade">
 				<center><img src="https://s2r.iucnredlist.org/sis2_images/487336308.jpg">
-				<div class="text">The beautiful black footed cat!</div></center>
+				<div class="text">The beautiful Black Footed Cat!</div></center>
 			</div>
 
 			<div class="mySlidesImg fade">
@@ -123,14 +146,21 @@
 			</div>
 
 			<div class="mySlidesImg fade">
-				<center><img src="https://cdn.zmescience.com/wp-content/uploads/2013/10/sand-cat.jpg">
-				<div class="text">A family of sand cats, who's species are mostly found in North Africa, the Middle East and Central Asia.</div></center>
+				<center><img src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1600_900/images/live/p0/28/76/p02876vs.jpg">
+				<div class="text">A sand cat, mostly found sunbathing in North Africa, the Middle East and Central Asia.</div></center>
 			</div>
 
 			<div class="mySlidesImg fade">
 				<center><img src="https://static.boredpanda.com/blog/wp-content/uploads/2015/11/pallas-cat-manul-2.jpg">
 				<div class="text">The comical Pallas Cat.</div></center>
 			</div>
+
+			<div class="mySlidesImg fade">
+				<center><img src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1600_900/images/live/p0/28/7b/p0287bql.jpg">
+				<div class="text">The species named after the appearance of their ears - Caracal, Turkish for "black ears".</div></center>
+			</div>
+
+			
 
 			<a class="prev" onclick="plusSlidesImg(-1)">&#10094;</a>
 			<a class="next" onclick="plusSlidesImg(1)">&#10095;</a>
@@ -141,6 +171,7 @@
 			  <span class="dotImg" onclick="currentSlideImg(3)"></span> 
 			  <span class="dotImg" onclick="currentSlideImg(4)"></span> 
 			  <span class="dotImg" onclick="currentSlideImg(5)"></span> 
+			  <span class="dotImg" onclick="currentSlideImg(6)"></span> 
 			</div>
 		</div>
 
