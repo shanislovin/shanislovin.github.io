@@ -51,6 +51,20 @@ nav li a {
 	font-family: sans-serif;
 }
 
+.aboutImage {
+  max-height: 600px;
+  float: left;
+ }
+
+ .moreBackgroundImage {
+  background:  url("https://images.unsplash.com/photo-1513780043732-614405263485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") no-repeat;
+  background-size: cover;
+  filter: alpha(opacity=60); 
+  background-position: 0 -15vw;
+  overflow:auto;
+  height: 950px;
+ }
+
 .backgroundImage {
   background:  url("https://images.unsplash.com/photo-1513780043732-614405263485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80") no-repeat;
   background-size: cover;
@@ -97,8 +111,14 @@ nav li a {
  	margin-top: -40px;
  }
 
+  .textContainer {
+  padding: 100px; 
+  margin-left: 700px;
+  margin-right: 300px;
+  }
+
  .bodyText {
-	padding: 100px;	
+  font-size: 1.3em;
  }
 
  footer {
