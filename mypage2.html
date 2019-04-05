@@ -1,7 +1,9 @@
 <!-- RESOURCES
-
-	background image: https://i.imgur.com/KOXOBiN.gif
-
+	javascript source : https://ed-moore.net/html/js
+	two cat pictures : 
+		https://i.imgur.com/HhOoo3L.jpg
+		https://i.imgur.com/hQJ4lhR.jpg
+	cat bio : Daniel Nash
 -->
 <html> 
 
@@ -22,10 +24,10 @@
 	</header>
 
 	<body>
-		<div class="aboutImage"><img src="https://i.imgur.com/HhOoo3L.jpg" height=1000px></div>
+		<div class="aboutImage"><img src="https://i.imgur.com/HhOoo3L.jpg" height=1000px id="change" onMouseEnter="onHover();" onMouseLeave="offHover();"></div>
 		<div class="textContainer">
 			<h1>About the author and her pet.</h1>
-			<p class="bodyText"><i>
+			<p style="font-size: 1.3em"><i>
 				Meow, my name is Nori. My pet human is called Shanis. She's amazing. All I have to do to get food is to go up to her, and keep tapping her with my paw. She never tells me to stop and eventually I get my food. I can make her do whatever I want. If I hop into her bed I get a nice scratch behind the ear. When she's working on her laptop, all I have to do is sit on the keys and she gives me attention. She's a good pet. When I'm feeling generous I bring her my dead birds and dead mice, just to let her know I care for her. <br><br>
 
 				My day normally consists of lounging around in the sun. I love a good nap. Then I start my usual afternoon routine. I walk into the lounge room and scratch my favourite couch, to make sure everyone remembers it's mine. Then I'll go for a wander and play with some of my pets. I love it when we play with the toy mouse. They're such good pets, they laugh with me and play until I get bored. That brings me to dinner. I'll jump onto the table and meow until one of my pets finally obeys me and gets my food. <br><br>
@@ -34,6 +36,17 @@
 			</i></p>
 			<p class="author">Nori the cat</p>
 		</div>
+		<script>
+			function onHover()
+			{
+			    document.getElementById("change").src = 'https://i.imgur.com/hQJ4lhR.jpg';
+			}
+
+			function offHover()
+			{
+			    document.getElementById("change").src = 'https://i.imgur.com/HhOoo3L.jpg';
+			}
+		</script>
 	</body>
 
 </html>
